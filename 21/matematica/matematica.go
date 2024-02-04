@@ -9,3 +9,7 @@ var A int = 10
 type Carro struct {
 	Marca string
 }
+
+func (c Carro) Andar() string {
+	return ("carro andando")
+}
