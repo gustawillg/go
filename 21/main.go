@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"matematica"
+	"matematica/matematica"
 )
 
 func main() {
 	s := matematica.Soma(10, 20)
 
-	fmt.Printf("resultado: $v", s)
+	fmt.Println("resultado:", s)
 }
