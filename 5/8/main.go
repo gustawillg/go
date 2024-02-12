@@ -34,4 +34,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	c.Name = "eletronicos"
+	tx.Debug().Save(&c)
+	tx.Commit()
 }
