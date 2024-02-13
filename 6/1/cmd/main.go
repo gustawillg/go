@@ -13,5 +13,3 @@ func main() {
 	// fmt.Println(m.Add())
 	// fmt.Println(math.X)
 }
-
-//
