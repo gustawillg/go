@@ -55,10 +55,10 @@ func FuzzCalculateTax(f *testing.F) {
 	f.Fuzz(func(t *testing.T, amount float64) {
 		result := CalculateTax(amount)
 		if amount <= 0 && result != 0 {
-			t.Errorf("Reveived %f but expected 0", result)
+			t.Errorf("Received %f but expected 0", result)
 		}
 		if amount > 20000 && result != 20 {
-			t.Errorf("Reveived %f but expected 20", result)
+			t.Errorf("Received %f but expected 20", result)
 		}
 	})
 }
