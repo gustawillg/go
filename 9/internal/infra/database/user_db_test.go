@@ -15,7 +15,7 @@ func TestCreateUser(t *testing.T) {
 		t.Error(err)
 	}
 	db.AutoMigrate(&entity.User{})
-	user, _ := entity.NewUser("John", "j@j.com", "123456")
+	user, _ := entity.NewUser("John Doe", "j@j.com", "123456")
 	userDB := NewUser(db)
 
 	err = userDB.Create(user)
@@ -36,7 +36,7 @@ func TestFindByEmail(t *testing.T) {
 		t.Error(err)
 	}
 	db.AutoMigrate(&entity.User{})
-	user, _ := entity.NewUser("John", "j@j.com", "123456")
+	user, _ := entity.NewUser("John Doe", "j@j.com", "123456")
 	userDB := NewUser(db)
 
 	err = userDB.Create(user)
