@@ -13,3 +13,5 @@ func main() {
 	// fmt.Println(m.Add())
 	// fmt.Println(math.X)
 }
+
+//exportação feita no 1
