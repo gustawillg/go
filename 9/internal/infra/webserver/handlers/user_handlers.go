@@ -3,6 +3,7 @@ package handlers
 import (
 	"net/http"
 
+	"github.com/go-chi/jwtauth"
 	"github.com/goccy/go-json"
 	"github.com/gustawillg/go/9/internal/dto"
 	"github.com/gustawillg/go/9/internal/entity"
@@ -10,7 +11,9 @@ import (
 )
 
 type UserHandler struct {
-	UserDB database.UserInterface
+	UserDB        database.UserInterface
+	Jwt           *jwtauth.JWTAuth
+	JwtExperiesIn int
 }
 
 func NewUserHandler(userDB database.UserInterface) *UserHandler {
