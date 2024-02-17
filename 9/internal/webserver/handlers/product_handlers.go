@@ -177,6 +177,7 @@ func (h *ProductHandler) UpdateProduct(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
+// commit
 // DeleteProduct godoc
 // @Summary      Delete a product
 // @Description  Delete a product
