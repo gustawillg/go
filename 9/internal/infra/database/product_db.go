@@ -9,6 +9,11 @@ type Product struct {
 	DB *gorm.DB
 }
 
+// Delete implements ProductInterface.
+func (*Product) Delete(id string) error {
+	panic("unimplemented")
+}
+
 func NewProduct(db *gorm.DB) *Product {
 	return &Product{DB: db}
 }

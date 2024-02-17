@@ -32,6 +32,7 @@ func NewProductHandler(db database.ProductInterface) *ProductHandler {
 // @Failure      500         {object}  Error
 // @Router       /products [post]
 // @Security ApiKeyAuth
+
 func (h *ProductHandler) CreateProduct(w http.ResponseWriter, r *http.Request) {
 	var product dto.CreateProductInput
 	err := json.NewDecoder(r.Body).Decode(&product)
@@ -78,6 +79,7 @@ func (h *ProductHandler) CreateProduct(w http.ResponseWriter, r *http.Request) {
 // @Failure      500       {object}  Error
 // @Router       /products [get]
 // @Security ApiKeyAuth
+
 func (h *ProductHandler) GetProducts(w http.ResponseWriter, r *http.Request) {
 	page := r.URL.Query().Get("page")
 	limit := r.URL.Query().Get("limit")
@@ -114,6 +116,7 @@ func (h *ProductHandler) GetProducts(w http.ResponseWriter, r *http.Request) {
 // @Failure      500  {object}  Error
 // @Router       /products/{id} [get]
 // @Security ApiKeyAuth
+
 func (h *ProductHandler) GetProduct(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {
@@ -143,6 +146,7 @@ func (h *ProductHandler) GetProduct(w http.ResponseWriter, r *http.Request) {
 // @Failure      500       {object}  Error
 // @Router       /products/{id} [put]
 // @Security ApiKeyAuth
+
 func (h *ProductHandler) UpdateProduct(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {
@@ -185,6 +189,7 @@ func (h *ProductHandler) UpdateProduct(w http.ResponseWriter, r *http.Request) {
 // @Failure      500       {object}  Error
 // @Router       /products/{id} [delete]
 // @Security ApiKeyAuth
+
 func (h *ProductHandler) DeleteProduct(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {

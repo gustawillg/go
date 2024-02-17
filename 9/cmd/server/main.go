@@ -10,6 +10,7 @@ import (
 	"github.com/gustawillg/go/9/configs"
 	"github.com/gustawillg/go/9/internal/entity"
 	"github.com/gustawillg/go/9/internal/infra/database"
+	"github.com/gustawillg/go/9/internal/webserver/handlers"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
