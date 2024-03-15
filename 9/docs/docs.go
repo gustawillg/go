@@ -12,13 +12,13 @@ const docTemplate = `{
         "title": "{{.Title}}",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
-            "name": "Wesley Willians",
-            "url": "http://www.fullcycle.com.br",
-            "email": "atendimento@fullcycle.com.br"
+            "name": "will",
+            "url": "github.com/gustawillg",
+            "email": "gustavowillan123@gmail.com",
         },
         "license": {
-            "name": "Full Cycle License",
-            "url": "http://www.fullcycle.com.br"
+            "name": "Will License",
+            "url": "github.com/gustawillg"
         },
         "version": "{{.Version}}"
     },

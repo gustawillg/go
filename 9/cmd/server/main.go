@@ -8,9 +8,11 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/jwtauth"
 	"github.com/gustawillg/go/9/configs"
+	_ "github.com/gustawillg/go/9/docs"
 	"github.com/gustawillg/go/9/internal/entity"
 	"github.com/gustawillg/go/9/internal/infra/database"
 	"github.com/gustawillg/go/9/internal/infra/webserver/handlers"
+	httpSwagger "github.com/swaggo/http-swagger"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
